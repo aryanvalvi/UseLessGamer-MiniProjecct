@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import product from "./product";
+import "./News.scss";
 
 const News = () => {
   return (
     <>
-      <div className="container">
+      <div className="News-container">
+        <p className="NEWS">NEWS</p>
         <Splide
           options={{
             autoplay: true,
@@ -25,8 +27,9 @@ const News = () => {
                 <SplideSlide key={data.id}>
                   <div className="card">
                     <img className="img1" src={data.img} alt="" />
+
+                    <p className="p">{data.title}</p>
                   </div>
-                  <p className="p">{data.title}</p>
                 </SplideSlide>
               </>
             );

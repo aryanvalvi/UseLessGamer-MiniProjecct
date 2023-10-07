@@ -4,17 +4,24 @@ import Tournament from "../Tournaments/Tournament";
 import Teams from "../Teams/Teams";
 import Match from "../MatchResult/Match";
 import Navbar from "../navbar/Navbar";
+import "./Home.scss";
+import HomeImage from "../../../public/image/gandu.jpg";
 
 const Home = () => {
   return (
     <>
       <Navbar></Navbar>
       <div className="container">
-        <p>E-sport community</p>
-        <p>
-          We Organize esport tournaments for professional and amatuer gamers
-        </p>
-        <button>Tournament</button>
+        <div className="background-container">
+          {/* <img className="home" src={HomeImage} alt="" srcset="" /> */}
+        </div>
+        <div className="homeContent">
+          <p className="E">E-sport community</p>
+          <p className="E-M">
+            We Organize esport tournaments for professional and amatuer gamers
+          </p>
+          <button className="T-btn">Tournament</button>
+        </div>
         <News></News>
         <Teams></Teams>
         <Tournament></Tournament>

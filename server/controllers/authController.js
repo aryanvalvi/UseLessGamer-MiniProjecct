@@ -77,8 +77,11 @@ const login = async (req, res) => {
   });
 };
 
+const Chat = (req, res) => {};
+
 module.exports = {
   test,
   registerUser,
   login,
+  Chat,
 };

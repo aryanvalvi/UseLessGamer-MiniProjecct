@@ -9,6 +9,7 @@ import { Toaster } from "react-hot-toast";
 import Register from "./Auth/Register";
 import "./App.css";
 import PrivateRoute from "./Auth/PrivateRoute";
+import ChatRoom from "./chat/ChatRoom";
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
 const App = () => {
@@ -20,10 +21,11 @@ const App = () => {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/Register" element={<Register></Register>}></Route>
-          <Route
+          {/* <Route
             path="/gandu"
             element={<PrivateRoute Component={Gandu}></PrivateRoute>}
-          ></Route>
+          ></Route> */}
+          <Route path="/chatRoom" element={<ChatRoom></ChatRoom>}></Route>
         </Routes>
         {/* <Routes></Routes> */}
       </BrowserRouter>

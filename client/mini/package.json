@@ -17,6 +17,8 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.16.0",
+    "react-scroll-to-bottom": "^4.2.0",
+    "sass": "^1.69.0",
     "scss": "^0.2.4",
     "socket.io-client": "^4.7.2"
   },

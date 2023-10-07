@@ -32,12 +32,13 @@ const Login = () => {
         const userId = responseData.userId;
 
         localStorage.setItem("login", userId);
+        localStorage.setItem("Username", email);
 
-        navigate("/gandu");
+        // navigate("/gandu");
 
         // Store userId in localStorage
         localStorage.setItem("userId", userId);
-        console.log("User ID stored in localStorage:", userId);
+        console.log("User ID stored in localStorage:", email);
       }
     } catch (error) {
       console.log(error);
@@ -47,7 +48,7 @@ const Login = () => {
   useEffect(() => {
     let login = localStorage.getItem("login");
     if (login) {
-      navigate("./gandu");
+      // navigate("./gandu");
     }
   });
 
