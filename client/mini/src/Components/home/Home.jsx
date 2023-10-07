@@ -12,9 +12,7 @@ const Home = () => {
     <>
       <Navbar></Navbar>
       <div className="container">
-        <div className="background-container">
-          {/* <img className="home" src={HomeImage} alt="" srcset="" /> */}
-        </div>
+        <div className="background-container"></div>
         <div className="homeContent">
           <p className="E">E-sport community</p>
           <p className="E-M">
@@ -24,8 +22,8 @@ const Home = () => {
         </div>
         <News></News>
         <Teams></Teams>
-        <Tournament></Tournament>
-        <Match></Match>
+        {/* <Tournament></Tournament> */}
+        {/* <Match></Match> */}
       </div>
     </>
   );
