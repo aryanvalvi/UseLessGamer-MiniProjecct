@@ -10,6 +10,12 @@ import Register from "./Auth/Register";
 import "./App.css";
 import PrivateRoute from "./Auth/PrivateRoute";
 import ChatRoom from "./chat/ChatRoom";
+import Tournament from "./Components/Tournaments/Tournament";
+import TournamentRegister from "./Components/Tournaments/TournamentRegister";
+import LabelRegister from "./Components/Tournaments/LabelRegister";
+import Bignews from "./Components/News/BigNews";
+import TeamDetail from "./Components/MatchResult/TeamDetail";
+import Teambada from "./Components/Teams/Teambada";
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
 const App = () => {
@@ -26,6 +32,27 @@ const App = () => {
             element={<PrivateRoute Component={Gandu}></PrivateRoute>}
           ></Route> */}
           <Route path="/chatRoom" element={<ChatRoom></ChatRoom>}></Route>
+          <Route
+            path="/tournaments"
+            element={<Tournament></Tournament>}
+          ></Route>
+          <Route path="/bign" element={<Bignews></Bignews>}></Route>
+          <Route
+            path="/RegisterTeam"
+            element={<TournamentRegister></TournamentRegister>}
+          ></Route>
+          <Route
+            path="/teambada/:heading"
+            element={<Teambada></Teambada>}
+          ></Route>
+          <Route
+            path="/team/:teamName"
+            element={<TeamDetail></TeamDetail>}
+          ></Route>
+          <Route
+            path="/RegisterLabel"
+            element={<LabelRegister></LabelRegister>}
+          ></Route>
         </Routes>
         {/* <Routes></Routes> */}
       </BrowserRouter>

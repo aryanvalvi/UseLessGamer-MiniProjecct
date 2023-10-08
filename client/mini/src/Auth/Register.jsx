@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Register.scss";
 const Register = () => {
   const navigate = useNavigate();
 
@@ -32,30 +33,32 @@ const Register = () => {
     }
   };
   return (
-    <div>
+    <div className="Register-container">
       <form onSubmit={registerUser}>
-        <label>Name</label>
+        <label className="label">Name</label>
         <input
           value={data.name}
           onChange={(e) => setData({ ...data, name: e.target.value })}
           type="text"
           placeholder="Enter Name..."
         />
-        <label>Email</label>
+        <label className="label">Email</label>
         <input
           value={data.email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
-          type="text"
+          type="email"
           placeholder="Enter Email..."
         />
-        <label>Password</label>
+        <label className="label">Password</label>
         <input
           value={data.Password}
           onChange={(e) => setData({ ...data, Password: e.target.value })}
-          type="text"
+          type="password"
           placeholder="Enter Password..."
         />
-        <button type="submit">Submit</button>
+        <button className="T-btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

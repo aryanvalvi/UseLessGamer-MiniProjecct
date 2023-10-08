@@ -1,0 +1,46 @@
+.rahul {
+  background-color: black;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  position: relative;
+  // width: 100%;
+  // //   background-image: url("../../../public/image/tour.jpg");
+  height: 600px;
+}
+
+.teamba-container {
+  position: absolute;
+  top: 20%;
+  img {
+    max-width: 300px;
+  }
+}
+
+.godlplayer {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  img {
+    max-width: 400px;
+    max-height: 300px;
+  }
+}
+.cont {
+  color: #fff;
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  max-width: 700px;
+}
+.social {
+  display: flex;
+  color: #fff;
+
+  position: absolute;
+  top: 90%;
+  img {
+    max-width: 40px;
+  }
+}

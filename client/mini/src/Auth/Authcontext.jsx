@@ -1,5 +1,4 @@
-// AuthContext.js
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
 
@@ -8,33 +7,21 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const [authData, setAuthData] = useState({
-    isAuthenticated: false,
-  });
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [Teamname, setTeamname] = useState("");
 
-  const login = (authResult) => {
-    // Use authResult to determine if authentication was successful.
-    // For example, you might receive a boolean or a user object from your authentication logic.
-    if (authResult) {
-      setAuthData({
-        isAuthenticated: true,
-      });
-    } else {
-      setAuthData({
-        isAuthenticated: false,
-      });
-    }
+  const login = () => {
+    setIsAuthenticated(true);
   };
 
   const logout = () => {
-    // Clear authData when the user logs out.
-    setAuthData({
-      isAuthenticated: false,
-    });
+    setIsAuthenticated(false);
   };
 
   return (
-    <AuthContext.Provider value={{ authData, login, logout }}>
+    <AuthContext.Provider
+      value={{ isAuthenticated, login, logout, Teamname, setTeamname }}
+    >
       {children}
     </AuthContext.Provider>
   );

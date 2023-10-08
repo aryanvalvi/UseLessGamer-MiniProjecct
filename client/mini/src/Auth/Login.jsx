@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import "./Login.scss";
+import { useAuth } from "./AuthContext";
 
 const Login = () => {
+  const { isAuthenticated, login, logout } = useAuth();
+  const [isLoggedin, setIsLoggedIn] = useState(false);
   const [data, setData] = useState({
     email: "",
     Password: "",
@@ -34,11 +38,15 @@ const Login = () => {
         localStorage.setItem("login", userId);
         localStorage.setItem("Username", email);
 
-        // navigate("/gandu");
+        login();
+        // isAuthenticated(true);
+
+        // setIsLoggedIn(true);
 
         // Store userId in localStorage
         localStorage.setItem("userId", userId);
         console.log("User ID stored in localStorage:", email);
+        navigate("/");
       }
     } catch (error) {
       console.log(error);
@@ -53,16 +61,16 @@ const Login = () => {
   });
 
   return (
-    <div>
-      <form action="" onSubmit={loginUser}>
-        <label>Email</label>
+    <div className="Login-Container">
+      <form className="login" action="" onSubmit={loginUser}>
+        <label className="labe">Email</label>
         <input
           value={data.email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
           type="text"
           placeholder="Enter Email..."
-        />
-        <label>Password</label>
+        />{" "}
+        <label className="labe">Password</label>
         <input
           value={data.Password}
           onChange={(e) => setData({ ...data, Password: e.target.value })}

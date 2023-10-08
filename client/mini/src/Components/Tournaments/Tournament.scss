@@ -1,0 +1,143 @@
+.faf {
+  background-image: url("../../../public/image/gandus.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  text-align: center;
+  h1 {
+    padding-top: 300px;
+    color: #fff;
+  }
+  button {
+    margin-top: 140px;
+    margin-left: 900px;
+    background-color: #061329;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  button:hover {
+    background-color: rgb(11, 5, 26);
+  }
+  button:active {
+    transform: scale(0.95);
+    background-color: #493481;
+    color: #fff;
+  }
+}
+.tour-container {
+  background-image: url("../../../public/image/tour.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .card-grid {
+    margin-left: 110px;
+    width: 1000px;
+    height: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+
+    .card {
+      width: 100%;
+      margin-bottom: -100px;
+      position: relative;
+      //   background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+
+      p {
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      button {
+        background-color: #061329;
+        margin-left: 10px;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: rgb(11, 5, 26);
+      }
+      button:active {
+        transform: scale(0.95);
+        background-color: #493481;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.html {
+  position: absolute;
+  top: 10%;
+}
+.name {
+  padding-top: 30px;
+  color: #fff;
+  font-family: Outfit;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27.5px; /* 144.737% */
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+}
+
+.time {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27.5px; /* 144.737% */
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+}
+
+.labelT {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27.5px; /* 88.71% */
+  letter-spacing: 3.1px;
+  text-transform: uppercase;
+}
+.btn-tournament {
+  position: absolute;
+  top: 150%;
+  right: 0;
+}

@@ -3,6 +3,7 @@ import team from "./teamsBhai";
 import "./Team.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
 
 const Teams = () => {
   return (
@@ -30,38 +31,48 @@ const Teams = () => {
         }}
       >
         {team.map((data) => (
-          <SplideSlide key={data.id}>
-            <div className="team-card">
-              <div className="team-image-container">
-                <img className="teamImage" src={data.img} alt={data.heading} />
+          <Link
+            className="jadduu"
+            to={`/teambada/${data.heading}`}
+            key={data.id}
+          >
+            <SplideSlide key={data.id}>
+              <div className="team-card">
+                <div className="team-image-container">
+                  <img
+                    className="teamImage"
+                    src={data.img}
+                    alt={data.heading}
+                  />
+                </div>
+                <h1 className="data-h1">{data.heading}</h1>
+                <p className="data-p1">{data.game}</p>
+                <div className="players">
+                  <img
+                    className="playerImage"
+                    src={data.player1}
+                    alt={data.player1}
+                  />
+                  <img
+                    className="playerImage"
+                    src={data.player2}
+                    alt={data.player2}
+                  />
+                  <img
+                    className="playerImage"
+                    src={data.player3}
+                    alt={data.player3}
+                  />
+                  <img
+                    className="playerImage"
+                    src={data.player4}
+                    alt={data.player4}
+                  />
+                </div>
+                <button className="team-btn">TEAM Page</button>
               </div>
-              <h1 className="data-h1">{data.heading}</h1>
-              <p className="data-p1">{data.game}</p>
-              <div className="players">
-                <img
-                  className="playerImage"
-                  src={data.player1}
-                  alt={data.player1}
-                />
-                <img
-                  className="playerImage"
-                  src={data.player2}
-                  alt={data.player2}
-                />
-                <img
-                  className="playerImage"
-                  src={data.player3}
-                  alt={data.player3}
-                />
-                <img
-                  className="playerImage"
-                  src={data.player4}
-                  alt={data.player4}
-                />
-              </div>
-              <button className="team-btn">TEAM Page</button>
-            </div>
-          </SplideSlide>
+            </SplideSlide>
+          </Link>
         ))}
       </Splide>
     </div>

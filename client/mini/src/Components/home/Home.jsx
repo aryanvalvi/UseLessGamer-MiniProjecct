@@ -6,6 +6,7 @@ import Match from "../MatchResult/Match";
 import Navbar from "../navbar/Navbar";
 import "./Home.scss";
 import HomeImage from "../../../public/image/gandu.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,12 +19,14 @@ const Home = () => {
           <p className="E-M">
             We Organize esport tournaments for professional and amatuer gamers
           </p>
-          <button className="T-btn">Tournament</button>
+          <Link to="/tournaments">
+            <button className="T-btn">Tournament</button>
+          </Link>
         </div>
         <News></News>
         <Teams></Teams>
         {/* <Tournament></Tournament> */}
-        {/* <Match></Match> */}
+        <Match></Match>
       </div>
     </>
   );
