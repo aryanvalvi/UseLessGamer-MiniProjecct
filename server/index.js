@@ -33,7 +33,9 @@ io.on("connection", (socket) => {
 
 //database Connections
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URL, {
+    serverSelectionTimeoutMS: 30000, // Set to 30 seconds
+  })
   .then(() => {
     console.log("database Connected");
   })

@@ -45,7 +45,7 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <Link to="/createAcc">
+                <Link to="/Register">
                   <button className="nav-btn">Create Account</button>
                 </Link>
                 <Link to="/login">

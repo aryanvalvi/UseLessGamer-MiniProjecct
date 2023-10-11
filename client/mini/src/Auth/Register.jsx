@@ -35,21 +35,21 @@ const Register = () => {
   return (
     <div className="Register-container">
       <form onSubmit={registerUser}>
-        <label className="label">Name</label>
+        <label className="labelll">Name</label>
         <input
           value={data.name}
           onChange={(e) => setData({ ...data, name: e.target.value })}
           type="text"
           placeholder="Enter Name..."
         />
-        <label className="label">Email</label>
+        <label className="labelll">Email</label>
         <input
           value={data.email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
           type="email"
           placeholder="Enter Email..."
         />
-        <label className="label">Password</label>
+        <label className="labelll">Password</label>
         <input
           value={data.Password}
           onChange={(e) => setData({ ...data, Password: e.target.value })}

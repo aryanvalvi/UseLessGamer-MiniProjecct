@@ -6,6 +6,8 @@ import "./Login.scss";
 import { useAuth } from "./AuthContext";
 
 const Login = () => {
+  const [saurabhGandu, SetSaurabhGandu] = useState(true);
+
   const { isAuthenticated, login, logout } = useAuth();
   const [isLoggedin, setIsLoggedIn] = useState(false);
   const [data, setData] = useState({
